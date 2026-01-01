@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- 🔒 ZOOM COMPLETELY DISABLED -->
+<meta name="viewport"
+      content="width=device-width,
+               initial-scale=1.0,
+               maximum-scale=1.0,
+               user-scalable=no">
+
+<title>KamaoGo – Official Company App</title>
+
+<style>
+/* 🔒 EXTRA ZOOM BLOCK */
+html, body{
+  margin:0;
+  padding:0;
+  touch-action: manipulation;
+  overscroll-behavior: none;
+  font-family: Arial, Segoe UI;
+  background:#0f172a;
+  color:#ffffff;
+}
+
+/* HEADER */
+header{
+  background:#020617;
+  padding:14px;
+  text-align:center;
+  border-bottom:2px solid #16a085;
+  position:relative;
+}
+
+/* LANGUAGE SELECT */
+.lang-select{
+  position:absolute;
+  top:10px;
+  right:10px;
+}
+select{
+  background:#1e293b;
+  color:#fff;
+  border:1px solid #334155;
+  padding:4px;
+  border-radius:4px;
+  font-size:12px;
+}
+
+/* SECTIONS */
+.section{
+  background:#1e293b;
+  margin:14px;
+  padding:15px;
+  border-radius:12px;
+}
+.section h3{
+  margin:0 0 6px 0;
+}
+.section p{
+  font-size:14px;
+  color:#cbd5e1;
+  line-height:1.6;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:9px 16px;
+  background:#16a085;
+  color:#000;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:600;
+}
+
+/* FOOTER */
+.footer{
+  font-size:12px;
+  color:#94a3b8;
+  padding:15px;
+  line-height:1.6;
+}
+
+.space{height:40px;}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="lang-select">
+    <select onchange="changeLang(this.value)">
+      <option value="en">EN</option>
+      <option value="hi">HI</option>
+      <option value="bn">BN</option>
+    </select>
+  </div>
+  <h2 id="title">KamaoGo</h2>
+  <p id="subtitle">Official Company & Customer Support Platform</p>
+</header>
+
+<div class="section">
+  <h3 id="aboutTitle">🏢 About KamaoGo</h3>
+  <p id="aboutText">
+    KamaoGo is an official digital company platform.
+    This application is used for company information, customer support,
+    and management of various services and divisions.
+  </p>
+</div>
+
+<div class="section">
+  <h3>🎧 Customer Care</h3>
+  <p>Your issues and questions are important to us.</p>
+  <a class="btn" href="tel:+916295650647">Call Customer Care</a><br><br>
+  <a class="btn" href="mailto:kamaogoofficial@gmail.com">Email Support</a>
+</div>
+
+<div class="section">
+  <h3 id="divisionTitle">🌳 Our Services</h3>
+  <p id="divisionText">
+    KamaoGo develops and manages multiple digital applications and services.
+    Game applications are handled under separate project divisions.
+  </p>
+</div>
+
+<div class="section">
+  <h3 id="privacyTitle">🔐 Privacy Policy</h3>
+  <p id="privacyText">
+    We respect user privacy. Basic information may be collected for support
+    and service usage.
+  </p>
+  <p id="policyChange">
+    KamaoGo reserves the right to update this policy when required.
+  </p>
+</div>
+
+<div class="footer">
+📧 kamaogoofficial@gmail.com <br>
+☎️ +91 6295650647
+</div>
+
+<div class="space"></div>
+
+<script>
+/* 🌐 LANGUAGE SWITCH */
+function changeLang(lang){
+  if(lang==="hi"){
+    title.innerText="KamaoGo";
+    subtitle.innerText="आधिकारिक कंपनी और कस्टमर सपोर्ट प्लेटफॉर्म";
+    aboutTitle.innerText="🏢 KamaoGo के बारे में";
+    aboutText.innerText="KamaoGo एक आधिकारिक डिजिटल कंपनी प्लेटफॉर्म है।";
+    divisionTitle.innerText="🌳 हमारी सेवाएँ";
+    divisionText.innerText="KamaoGo विभिन्न डिजिटल ऐप और सेवाएँ विकसित करता है।";
+    privacyTitle.innerText="🔐 गोपनीयता नीति";
+    privacyText.innerText="हम उपयोगकर्ता की गोपनीयता का सम्मान करते हैं।";
+    policyChange.innerText="KamaoGo इस नीति में बदलाव कर सकता है।";
+  }
+  if(lang==="bn"){
+    title.innerText="KamaoGo";
+    subtitle.innerText="অফিসিয়াল কোম্পানি ও কাস্টমার সাপোর্ট প্ল্যাটফর্ম";
+    aboutTitle.innerText="🏢 KamaoGo সম্পর্কে";
+    aboutText.innerText="KamaoGo একটি অফিসিয়াল ডিজিটাল কোম্পানি প্ল্যাটফর্ম।";
+    divisionTitle.innerText="🌳 আমাদের সার্ভিস";
+    divisionText.innerText="KamaoGo বিভিন্ন ডিজিটাল অ্যাপ ও সার্ভিস পরিচালনা করে।";
+    privacyTitle.innerText="🔐 প্রাইভেসি পলিসি";
+    privacyText.innerText="আমরা ব্যবহারকারীর গোপনীয়তাকে সম্মান করি।";
+    policyChange.innerText="KamaoGo প্রয়োজনে নীতি পরিবর্তন করতে পারে।";
+  }
+  if(lang==="en"){
+    location.reload();
+  }
+}
+</script>
+
+</body>
+</html>
